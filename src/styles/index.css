@@ -1,0 +1,31 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.gantt-task {
+  @apply relative h-8 rounded-lg cursor-pointer transition-all duration-200;
+}
+
+.gantt-task:hover {
+  @apply shadow-lg;
+}
+
+.gantt-timeline {
+  @apply grid grid-cols-[200px,1fr] border-b;
+}
+
+.timeline-header {
+  @apply sticky top-0 bg-white z-10;
+}
+
+.task-progress {
+  @apply absolute top-0 left-0 h-full bg-white bg-opacity-30 rounded-lg transition-all duration-200;
+}
+
+.task-label {
+  @apply absolute inset-0 flex items-center px-2 text-sm text-white font-medium truncate;
+}
+
+.dragging {
+  @apply opacity-50;
+}
